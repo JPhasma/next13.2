@@ -10,8 +10,15 @@ export default function ExampleLayout({
 }) {
   return (
     <html lang="en">
-      <h3>Example Nested Layout</h3>
-      <body>{children}</body>
+      <body>
+        <main className="nested_main">
+          <h3>Example Nested Layout</h3>
+          {children}
+        </main>
+        <div className="sidebar">
+          <h2>sidebar</h2>
+        </div>
+      </body>
     </html>
   );
 }
