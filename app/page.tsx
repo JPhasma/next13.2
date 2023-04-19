@@ -1,10 +1,13 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
-import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+// adding async turns this into a React server component
+export default async function Home() {
+  // get data
+  const res = await fetch("http://localhost:1337/api/sb-product-details-live");
+  const data = await res.json();
+  console.log(data);
 
-export default function Home() {
   return (
     <main>
       <h1>
