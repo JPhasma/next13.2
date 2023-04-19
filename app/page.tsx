@@ -1,13 +1,5 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
-
-// adding async turns this into a React server component
-export default async function Home() {
-  // get data
-  const res = await fetch("http://localhost:1337/api/sb-product-details-live");
-  const data = await res.json();
-  console.log(data);
-
+export default function Home() {
   return (
     <main>
       <h1>
@@ -19,10 +11,10 @@ export default async function Home() {
           height={37}
           priority
         />
-        <div>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
+
+        <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
       </h1>
+      <br />
       <h2> Using latest experimental features</h2>
     </main>
   );
