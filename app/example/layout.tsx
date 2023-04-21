@@ -17,6 +17,7 @@ export default function ExampleLayout({
         </main>
         <div className="sidebar">
           <h2>sidebar</h2>
+          <p>put some other content and components in here ...</p>
         </div>
       </body>
     </html>
