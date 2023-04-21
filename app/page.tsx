@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 // adding async turns this into a React server component
 export default async function Home() {
@@ -26,6 +27,14 @@ export default async function Home() {
       <h2> Using latest experimental features</h2>
       <br />
       <h1>{data.seoContent.title}</h1>
+      <ul>
+        <li>
+          <Link href="/example">Example Link</Link>
+        </li>
+        <li>
+          <Link href="/blog/1234">Blog article Link</Link>
+        </li>
+      </ul>
     </main>
   );
 }

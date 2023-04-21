@@ -46,3 +46,7 @@ main {
 .sidebar {
   padding: 1em;
 }
+
+a {
+  color: deeppink;
+}
