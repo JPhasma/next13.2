@@ -7,6 +7,7 @@ export default async function Home() {
     "https://strapi-v4.qa.webcms-dev.digital.nbrown.co.uk/api/sb-homepage"
   );
   const data = await res.json();
+  console.log(data);
 
   return (
     <main>
