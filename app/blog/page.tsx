@@ -3,7 +3,8 @@ import Link from "next/link";
 export default async function Blog() {
   // get data
   const res = await fetch(
-    "https://strapi-v4.qa.webcms-dev.digital.nbrown.co.uk/api/sb-blog-pages-live"
+    "https://strapi-v4.qa.webcms-dev.digital.nbrown.co.uk/api/sb-blog-pages-live",
+    { cache: "no-store" } // equivalent of 'getServerSideProps
   );
   const data = await res.json();
   // this is server side, so wont be in the browser console
@@ -20,7 +21,7 @@ export default async function Blog() {
         <li>
           <Link href="/example">Example Link</Link>
         </li>
-        {data.map((item) => {
+        {data?.map((item: any) => {
           return (
             <li key={item.id}>
               <Link href={`/blog/${item.id}`}>
