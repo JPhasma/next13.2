@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 // adding async turns this into a React server component
+// securely run on the server by default
 export default async function Home() {
   // get data
   const res = await fetch(
@@ -23,10 +24,12 @@ export default async function Home() {
 
         <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
       </h1>
-      <br />
+
       <h2> Using latest experimental features</h2>
-      <br />
+
       <h1>{data.seoContent.title}</h1>
+
+      <h4>Example Links</h4>
       <ul>
         <li>
           <Link href="/example">Example Link</Link>
