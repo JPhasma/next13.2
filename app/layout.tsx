@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 import "./globals.css";
 
@@ -14,7 +15,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header>
+          <h1>
+            <Image
+              // className={styles.logo}
+              src="/next.svg"
+              alt="Example of Next JS 13"
+              width={180}
+              height={37}
+              priority
+            />
+
+            <Image
+              src="/thirteen.svg"
+              alt="13"
+              width={40}
+              height={31}
+              priority
+            />
+          </h1>
+          <nav>
+            <Link href="/">Home</Link> |{" "}
+            <Link href="/example">Nested Layout</Link> |{" "}
+            <Link href="/blog">Blog</Link>
+          </nav>
+        </header>
+
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

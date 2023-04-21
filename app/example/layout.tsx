@@ -4,16 +4,14 @@ export default function ExampleLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body>
-        <main className="nested_main">
-          <h3>Example Nested Layout</h3>
-          {children}
-        </main>
-        <div className="sidebar">
-          <h2>sidebar</h2>
-        </div>
-      </body>
-    </html>
+    <div>
+      <div className="nested_main">
+        <h3>Example Nested Layout</h3>
+        {children}
+      </div>
+      <div className="sidebar">
+        <h2>sidebar</h2>
+      </div>
+    </div>
   );
 }
