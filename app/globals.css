@@ -41,6 +41,7 @@ main {
   height: 400px;
   width: 65%;
   float: left;
+  margin-right: 8px;
 }
 
 .sidebar {
