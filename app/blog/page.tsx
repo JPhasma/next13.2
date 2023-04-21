@@ -15,6 +15,9 @@ export default async function Blog() {
 
       <ul>
         <li>
+          <Link href="/">Home</Link>
+        </li>
+        <li>
           <Link href="/example">Example Link</Link>
         </li>
         {data.map((item) => {

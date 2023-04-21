@@ -32,10 +32,10 @@ export default async function Home() {
       <h4>Example Links</h4>
       <ul>
         <li>
-          <Link href="/example">Example Link</Link>
+          <Link href="/example">Nested Layouts Example Link</Link>
         </li>
         <li>
-          <Link href="/blog/1234">Blog article Link</Link>
+          <Link href="/blog/21">Blog article Link</Link>
         </li>
       </ul>
     </main>
